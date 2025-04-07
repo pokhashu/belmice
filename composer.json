@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "~6.9",
+        "setasign/fpdf": "~1.8",
+        "hflabs/dadata": "^24.4",
+      "ext-iconv": "*"
+    }
+}

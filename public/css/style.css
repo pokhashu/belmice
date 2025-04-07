@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    --main-title-color: #2c76e1;
+    --main-bg-color: #D9EBFE;
+}
+body {
+    font-family: Arial, serif;
+    font-weight: 400;
+
+}
+.container {
+    background: none;
+}
+.disabled{
+    color: #999999 !important;
+}
+
+.philosopher-regular {
+    font-family: "Philosopher", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.philosopher-bold {
+    font-family: "Philosopher", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.philosopher-regular-italic {
+    font-family: "Philosopher", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.philosopher-bold-italic {
+    font-family: "Philosopher", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.page-block {
+    height: 100vh;
+}
+.page-block-1 {
+    background: url(../../src/main-page.jpg);
+    background-size: 100vw;
+    background-position-y: 40%;
+}
+
+.page-block-2 {
+    padding-top: 25px;
+}
+.page-block-3 {
+    /*padding-top: 15px;*/
+}
+.text-title {
+    font-family: "Philosopher", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-title-blue {
+    color: var(--main-title-color) !important;
+}
+
+.navbar {
+    padding: 0 90px !important;
+    z-index: 5;
+    flex-direction: column;
+}
+.navbar-nav {
+    align-items: center !important;
+    width: 100% !important;
+    justify-content: space-around;
+}
+.page-block-1 nav {
+    background-color: var(--main-bg-color) !important;
+}
+
+nav a{
+    color: var(--main-title-color) !important;
+    font-size: 19px;
+    line-height: 22px;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+nav a:hover{
+    color: #144fbc !important;
+}
+
+.nav-link {
+    line-height: 16px;
+}
+
+nav .dropdown-menu{
+    border-radius: 0 0 10px 10px !important;
+    top: 67px !important;
+}
+
+
+.text-head {
+    color: var(--main-title-color);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 36px;
+}
+
+.header-logo {
+    width: 146px;
+    height: 91px;
+}
+.header-text {
+    z-index: 1;
+    line-height: 65px;
+    background: linear-gradient(0deg, rgba(0,0,35,0.35) 70%, rgba(255,255,255,0) 100%);
+}
+.page-block-1 .text-title {
+    color: white;
+    font-size: 60px;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-device-width: 1525px) {
+    nav a {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+@media only screen and (max-device-width: 1425px) {
+    nav a {
+        font-size: 16px;
+        line-height: 16px;
+
+    }
+}
+@media only screen and (max-device-width: 1325px) {
+    nav a {
+        font-size: 14px;
+        line-height: 14px;
+
+    }
+}
+@media only screen and (max-device-width: 1225px) {
+    nav a {
+        font-size: 13px;
+        line-height: 13px;
+
+    }
+}
+@media only screen and (max-device-width: 1199px) {
+    nav a {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 865px) {
+    .page-block-1 .text-title {
+        line-height: 45px !important;
+        font-size: 40px !important;
+    }
+    .navbar {
+        padding: 0 10px !important;
+    }
+}
+@media screen and (max-width: 605px) {
+    .page-block-1 .text-title {
+        line-height: 35px !important;
+        font-size: 27px !important;
+    }
+    .text-head {
+        font-size: 25px;
+    }
+    .header-logo {
+        width: 100px;
+        height: 62px;
+    }
+    .page-block-1 {
+        height: 50vh;
+    }
+    .page-block-1::before {
+        height: 50%;
+    }
+}
+@media screen and (max-width: 405px) {
+
+    .text-head {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+.slide-container {
+    max-width: 1550px;
+    width: 100%;
+    padding: 5px 0 40px 0;
+    margin: 0 auto;
+}
+
+.page-block-2_slide-content {
+    margin: 0 70px;
+    overflow: hidden; /* Это должно быть, чтобы скрыть лишние слайды */
+    border-radius: 25px;
+}
+
+.page-block-2_slide-content .card {
+    border-radius: 25px;
+    background-size: cover;
+    height: 260px;
+}
+
+/*.slide-container{*/
+/*    max-width: 1305px;*/
+/*    width: 100%;*/
+/*    padding: 40px 0;*/
+/*}*/
+/*.slide-content{*/
+/*    margin: 0 70px;*/
+/*    overflow: hidden;*/
+/*    border-radius: 25px;*/
+/*}*/
+/*.card{*/
+/*    border-radius: 25px;*/
+/*    background-image: url("src/people-taking.jpg");*/
+/*    background-size: cover;*/
+/*    height: 370px !important;*/
+/*    width: 260px !important;*/
+/*}*/
+
+.card-content{
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 18px;
+    padding: 15px 15px;
+    justify-content: space-between;
+    background: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.55) 15%, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0.35) 55%, rgba(255,255,255,0) 75%);
+    border-radius: 25px;
+}
+
+
+.name{
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.description{
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+}
+.description h6 {
+    text-transform: uppercase;
+}
+.description p {
+    margin-bottom: 0;
+}
+.button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #4070F4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover{
+    background: #265DF2;
+}
+.swiper-navBtn{
+    background-color: var(--main-title-color);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+    background-color: #2c4ae1;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 22px;
+}
+
+.swiper-button-next{
+    right: 15px;
+}
+.swiper-button-prev{
+    left: 15px;
+}
+.swiper-pagination-bullet{
+    background-color: #6E93f7;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: #4070F4;
+}
+@media screen and (max-width: 768px) {
+    .page-block-2_slide-content{
+        margin: 0 10px;
+    }
+    .swiper-navBtn{
+        display: none;
+    }
+}
+
+.why_we_chosen {
+    padding: 0 80px;
+    margin-top: 25px;
+    background-color: var(--main-bg-color);
+    width: 100%;
+    min-height: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.why_we_chosen-item {
+    display: flex;
+    flex-direction: column;
+    /*max-width: 14%;*/
+    width: 200px;
+    align-items: center;
+    color: #2C76BD;
+    font-family: Arial, serif;
+    font-size: 18px;
+}
+.why_we_chosen-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1560px) {
+    .why_we_chosen-item {
+        width: 150px;
+        font-size: 16px;
+    }
+
+    .why_we_chosen-text {
+        margin-top: 5px;
+    }
+    .why_we_chosen-img img{
+        max-height: 60px;
+    }
+}
+@media screen and (max-width: 1210px) {
+    .why_we_chosen-item {
+        width: 120px;
+        font-size: 14px;
+    }
+
+    .why_we_chosen-text {
+        margin-top: 5px;
+    }
+    .why_we_chosen-img img{
+        max-height: 45px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .page-block-2 {
+        height: auto !important;
+    }
+    .why_we_chosen {
+        padding-top: 30px;
+    }
+
+    .why_we_chosen-item {
+        width: 225px;
+        font-size: 16px;
+    }
+
+    .why_we_chosen-text {
+        margin-top: 10px;
+    }
+    .why_we_chosen-img img{
+        max-height: 70px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .why_we_chosen {
+        padding-top: 30px;
+    }
+
+    .why_we_chosen-item {
+        width: 255px;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .why_we_chosen-text {
+        margin-top: 10px;
+    }
+    .why_we_chosen-img img{
+        max-height: 80px;
+    }
+}
+
+.album .container {
+    padding: 0 50px;
+}
+.album .card {
+    border: none;
+    box-shadow: none;
+}
+
+.album .card-body {
+    padding-left: 0;
+}
+
+.album .card-bg{
+    height: 180px;
+    background-image: url("../../src/album-bg.jpg");
+    background-size: cover;
+    border-radius: 15px;
+}
+.album .card-text{
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.album .card-text{
+    font-size: 20px !important;
+    line-height: 22px !important;
+}
+.album .card-text_title{
+    color: var(--main-title-color);
+    text-transform: uppercase;
+    font-family: "Philosopher", serif;
+    font-weight: 700 !important;
+    font-style: normal;
+}
+.album .card-text_text{
+    font-family: Arial, serif;
+    font-size: 16px;
+}
+
+.album .card-button-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.album .card-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--main-title-color);
+    padding: 15px 47px;
+    border-radius: 30px;
+    font-size: 16px;
+    line-height: 16px;
+    transition:.3s;
+}
+.album .card-button:hover{
+    background-color: #1c59af;
+    animation:  500ms;
+}
+
+@media screen and (max-width: 1200px) {
+    .page-block-3 {
+        height: auto !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .album .card-bg{
+        height: 225px;
+    }
+    .album .card-button-container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+@keyframes scroll{
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+
+.page-block-4 .slide-container{
+    padding-bottom: 10px !important;
+}
+.partners_logo {
+    display: flex;
+    height: 184px;
+    justify-content: center;
+    align-items: center;
+}
+.partners_logo img {
+    height: 90%;
+    max-width: 250px;
+}
+
+/*.page-block-4*/
+.page-block-4 .why_we_chosen {
+    min-height: 200px;
+}
+.page-block-4 .why_we_chosen-item {
+    width: 200px
+}
+.page-block-4 .why_we_chosen-img span {
+    font-family: "Philosopher", serif;
+    font-weight: bold;
+    font-size: 53px;
+    line-height: 55px;
+    text-align: center !important;
+    display: flex;
+}
+
+@media screen and (max-width: 760px) {
+    .page-block-4 .why_we_chosen-img span {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .page-block-4 {
+        height: auto;
+    }
+}
+@media screen and (max-width: 560px) {
+    .page-block-4 .why_we_chosen-img span {
+        font-size: 60px;
+        line-height: 60px;
+    }
+}
+
+.page-block-5 .text-title {
+    padding-top: 55px;
+}
+
+#accordionFAQ .accordion-item {
+    border: none;
+}
+
+#accordionFAQ .accordion-header button{
+    font-family: "Philosopher", serif;
+    font-size: 24px !important;
+    color: var(--main-title-color);
+}
+
+#accordionFAQ .accordion-body {
+    font-size: 20px;
+    line-height: 22px;
+    color: #999;
+}
+
+#accordionFAQ .accordion-button {
+    border-bottom: 2px solid #99999999 !important;
+}
+@media screen and (max-width: 420px) {
+    .page-block-5 {
+        height: auto;
+    }
+    .text-title
+}
+
+.page-block-6_slide-content .slide-container {
+    /*max-width: 1550px;*/
+    /*width: 100%;*/
+    /*padding: 5px 0 40px 0;*/
+    /*margin: 0 auto;*/
+    /*height: 600px;*/
+}
+
+.page-block-6_slide-content {
+    margin: 0 70px;
+    overflow: hidden; /* Это должно быть, чтобы скрыть лишние слайды */
+    border-radius: 25px;
+}
+.reviews-img{
+    display: flex;
+    height: 600px !important;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.reviews-img img{
+
+    border: 1px solid rgba(153, 153, 153, 0.75);
+    max-height: 100%; /* Максимальная высота изображения - 100% от высоты контейнера */
+    max-width: 100%; /* Максимальная ширина изображения - 100% от ширины контейнера */
+    height: auto; /* Высота изображения автоматически подстраивается */
+    width: auto; /* Ширина изображения автоматически подстраивается */
+
+}
+@media screen and (max-width: 605px) {
+    .page-block-6 {
+        height: auto;
+        padding-top: 40px;
+    }
+    /*.reviews-img {*/
+    /*    height: 700px !important;*/
+    /*}*/
+    .page-block-6_swiper-pagination {
+        padding-bottom: 30px;
+    }
+
+    .page-block-6_slide-content {
+        margin: 0 5px;
+    }
+}
+
+.page-block-7 {
+    background-color: var(--main-title-color);
+}
+.page-block-7 form{
+    width: 100%;
+    padding: 0 350px;
+    height: 300px;
+    margin-bottom:50px
+}
+
+.feedbackForm {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.tinyInput {
+    width: 48%;
+}
+
+.page-block-7 .btn {
+
+    padding: 15px 60px;
+    color: #fff;
+    border: 1px solid var(--main-bg-color) !important;
+    border-radius: 30px !important;
+}
+#footer {
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+    background-color: var(--main-bg-color);
+    padding: 0 90px;
+}
+footer .fa{
+   color: #000;
+    font-size: 30px;
+}
+
+footer {
+    li  {
+        text-decoration: none;
+        color: #2C76BD;
+    }
+    li a {
+        text-decoration: none;
+        color: #2C76BD;
+    }
+}
+
+#footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .page-block-7 form{
+        padding: 0 150px;
+
+    }
+}
+@media screen and (max-width: 800px) {
+    .page-block-7 form{
+        padding: 0 50px;
+    }
+    #footer {
+        padding: 0 50px;
+    }
+}
+@media screen and (max-width: 605px) {
+    #footer {
+        border-top-right-radius: 80px;
+        border-top-left-radius: 80px;
+    }
+}
+@media screen and (max-width: 576px) {
+    footer .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .feedbackForm {
+        flex-direction: column;
+    }
+    .tinyInput {
+        width: 100%;
+    }
+}
+
+
+

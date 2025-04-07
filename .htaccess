@@ -1,0 +1,39 @@
+RewriteEngine On
+
+RewriteRule ^/?$ /public/index.php [L]
+RewriteRule ^about/?$ /static/pages/about.php [L]
+RewriteRule ^auth/?$ controller.php?page=login [L]
+RewriteRule ^dashboard/?$ controller.php?page=dashboard [L]
+RewriteRule ^signup/?$ controller.php?page=customerSignup [L]
+RewriteRule ^login/?$ controller.php?page=customerLogin [L]
+RewriteRule ^login/fromForm?$ controller.php?page=customerLogin&redirect=fromForm [L]
+
+RewriteRule ^portfolio/([a-zA-Z]+)/?$ controller.php?page=portfolio&id=-1&tag=$1 [L,QSA]
+RewriteRule ^portfolio/([0-9]+)/?$ controller.php?page=portfolio&id=$1&tag=none [L,QSA]
+RewriteRule ^f/(.*\d+.*)|([^a-zA-Z-/]+)/?$ /public/index.php [L]
+RewriteRule ^f/([a-zA-Z-]+)/?$ controller.php?page=form&formName=$1 [L,QSA]
+
+<filesMatch "\.(html|htm|js|css|php)$">
+FileETag None
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</filesMatch>
+<IfModule mod_expires.c>
+  Header set cache-control: public
+  ExpiresActive on
+
+  ExpiresByType font/ttf      "access plus 1 month"
+  ExpiresByType font/woff     "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  <FilesMatch "\.(ttf|otf|eot|svg)$" >
+    SetOutputFilter DEFLATE
+  </FilesMatch>
+</IfModule>
+
+
+
